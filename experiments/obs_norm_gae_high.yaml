@@ -1,0 +1,18 @@
+# Observation Normalization + High GAE (0.98)
+experiment_name: "ObsNorm_GAE_High_098"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.98         # <--- High: Aggressive/Precise
+ent_coef: 0.0
+vf_coef: 0.5
+max_grad_norm: 0.5
+
+# --- NORMALIZATION SETTINGS ---
+normalize_obs: True      # Scale inputs (Stabilizer)
+normalize_reward: True   # Scale rewards (Stabilizer)

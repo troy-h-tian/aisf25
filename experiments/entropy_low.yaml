@@ -1,0 +1,14 @@
+# Entropy Experiment (Low - 0.01)
+experiment_name: "Entropy_Low_001"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.95
+ent_coef: 0.01      # <--- CHANGED: Small exploration bonus
+vf_coef: 0.5
+max_grad_norm: 0.5

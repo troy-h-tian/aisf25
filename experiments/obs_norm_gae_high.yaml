@@ -15,4 +15,4 @@ max_grad_norm: 0.5
 
 # --- NORMALIZATION SETTINGS ---
 normalize_obs: True      # Scale inputs (Stabilizer)
-normalize_reward: True   # Scale rewards (Stabilizer)
+normalize_reward: False   # Scale rewards (Stabilizer)

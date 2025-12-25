@@ -1,0 +1,22 @@
+# Obs Norm + High GAE (0.98) + gSDE
+experiment_name: "ObsNorm_GAE98_gSDE"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.98         # <--- High: Aggressive
+ent_coef: 0.0            # (Handled by gSDE)
+vf_coef: 0.5
+max_grad_norm: 0.5
+
+# --- NORMALIZATION SETTINGS ---
+normalize_obs: True      # <--- YES: Scale inputs
+normalize_reward: False  # <--- NO: Keep rewards raw (prevents clipping issues)
+
+# --- gSDE SETTINGS ---
+use_sde: True            # <--- YES: Smooth exploration
+sde_sample_freq: 4

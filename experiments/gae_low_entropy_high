@@ -1,0 +1,14 @@
+# GAE Low (0.90) + Entropy High (0.1)
+experiment_name: "GAE090_Ent01_Stability"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.90    # <--- Low: Smoother, higher bias (trusts value function)
+ent_coef: 0.1       # <--- High: Massive exploration bonus (chaotic behavior)
+vf_coef: 0.5
+max_grad_norm: 0.5

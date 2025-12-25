@@ -1,0 +1,18 @@
+# gSDE Experiment
+experiment_name: "gSDE_Smooth_Exploration"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.95
+ent_coef: 0.0
+vf_coef: 0.5
+max_grad_norm: 0.5
+
+# --- NEW gSDE SETTINGS ---
+use_sde: True           # Turn on State Dependent Exploration
+sde_sample_freq: 4      # How often to reset the noise (4 = every 4 steps)

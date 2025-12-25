@@ -1,0 +1,14 @@
+# GAE High (0.98) + Entropy Low (0.01)
+experiment_name: "GAE098_Ent001_Stability"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.98    # <--- High: Relies more on actual returns (less smoothing)
+ent_coef: 0.01      # <--- Low: Small exploration bonus
+vf_coef: 0.5
+max_grad_norm: 0.5

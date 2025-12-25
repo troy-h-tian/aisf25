@@ -1,0 +1,18 @@
+# gSDE + High GAE (0.98) Experiment
+experiment_name: "gSDE_GAE_High_098"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.98    # <--- High: Relies more on actual returns (Noisy)
+ent_coef: 0.0       # (gSDE handles exploration internally, so we keep this 0)
+vf_coef: 0.5
+max_grad_norm: 0.5
+
+# --- gSDE SETTINGS ---
+use_sde: True           # <--- Smooth Exploration (Stabilizer)
+sde_sample_freq: 4

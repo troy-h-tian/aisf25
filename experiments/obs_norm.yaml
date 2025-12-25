@@ -1,0 +1,18 @@
+# Observation Normalization Experiment
+experiment_name: "Obs_Norm_Stability"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.95
+ent_coef: 0.0
+vf_coef: 0.5
+max_grad_norm: 0.5
+
+# --- NORMALIZATION SETTINGS ---
+normalize_obs: True      # Scale inputs (sight)
+normalize_reward: True   # Scale rewards (score)

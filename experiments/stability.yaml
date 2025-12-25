@@ -1,14 +1,14 @@
-# stability.yaml
-experiment_name: "Stability_Reward_Experiment"  <-- CHANGE THIS
+# Stability Experiment Configuration
+experiment_name: "Stability_Reward_Experiment"
 total_timesteps: 100000
 
-# Hyperparameters
+# PPO Hyperparameters
 learning_rate: 0.0003
-n_steps: 2048       # Rollout length
+n_steps: 2048
 batch_size: 64
 n_epochs: 10
-gamma: 0.99         # Discount factor
-gae_lambda: 0.95    # Factor for trade-off of bias vs variance
-ent_coef: 0.0       # Entropy coefficient (Exploration)
-vf_coef: 0.5        # Value function coefficient
-max_grad_norm: 0.5  # Gradient clipping
+gamma: 0.99
+gae_lambda: 0.95
+ent_coef: 0.0
+vf_coef: 0.5
+max_grad_norm: 0.5

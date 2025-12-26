@@ -1,0 +1,20 @@
+# Obs Norm + gSDE (Standard GAE 0.95)
+experiment_name: "ObsNorm_gSDE_Standard"
+total_timesteps: 100000
+
+# PPO Hyperparameters
+learning_rate: 0.0003
+n_steps: 2048
+batch_size: 64
+n_epochs: 10
+gamma: 0.99
+gae_lambda: 0.95        # <--- Standard (Stable & Reliable)
+ent_coef: 0.0           # (gSDE handles exploration)
+vf_coef: 0.5
+max_grad_norm: 0.5
+
+# --- STABILIZERS ---
+normalize_obs: True     # Clean inputs
+normalize_reward: False # Keep raw rewards
+use_sde: True           # Smooth movement
+sde_sample_freq: 4
